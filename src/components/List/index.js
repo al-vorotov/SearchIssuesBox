@@ -1,12 +1,15 @@
 import React from 'react';
 
-import styles from './styles.modules.scss'
+import styles from './styles.module.scss'
+import Issue from "../Issue";
 
-const List = (...restProps) => {
+const List = ({ issues, ...restProps}) => {
 
-  return (
-     <input {...restProps}/>
-  );
+    return (
+        <div className={styles.list}>
+            {issues.map((issue, index) => (<Issue issue={issue} key={issue.id} numberIssue={index} {...restProps}/>))}
+        </div>
+    );
 };
 
 export default List;
