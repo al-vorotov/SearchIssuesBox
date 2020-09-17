@@ -7,7 +7,14 @@ const List = ({ issues, ...restProps}) => {
 
     return (
         <div className={styles.list}>
-            {issues.map((issue, index) => (<Issue issue={issue} key={issue.id} numberIssue={index} {...restProps}/>))}
+            {issues.map((issue, index) => (
+                <Issue
+                    issue={issue}
+                    key={issue.id}
+                    numberIssue={index}
+                    {...restProps}
+                />
+                ))}
         </div>
     );
 };

@@ -6,7 +6,10 @@ const Label = ({ label }) => {
 
     return (
         <>
-            <div className={styles.label} style={{backgroundColor:`#${label.color}`}}>
+            <div
+                className={styles.label}
+                style={{backgroundColor:`#${label.color}`}}
+            >
                 <span>
                     {label.name}
                 </span>
